@@ -1,0 +1,28 @@
+.banner-container {
+    width: 100vw;
+    background-color: #ffcc00;
+    white-space: nowrap;
+  }
+  
+  .banner-content {
+    display: flex;
+    white-space: nowrap;
+    font-size: 18px;
+    font-weight: bold;
+    color: #333;
+    animation: scroll-banner 10s linear infinite;
+    margin: 0;
+    padding-top: 15px;
+   
+  }
+
+  
+  @keyframes scroll-banner {
+    0% {
+      transform: translateX(100vw);
+    }
+    100% {
+      transform: translateX(-100vw);
+    }
+  }
+  
