@@ -96,6 +96,38 @@ header {
     /* Cambia il colore al passaggio del mouse */
 }
 
+/* Stile per il contenitore dell'icona del chatbot */
+.icon-chatbot-container {
+    position: relative;
+    /* Necessario per posizionare il badge rispetto al contenitore */
+    display: inline-block;
+    margin: 0 10px;
+    padding: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 40px;
+    height: 40px;
+}
+
+/* Stile per l'icona del chatbot */
+.icon-chatbot-container i.fa-clipboard-question {
+    font-size: 1.5rem;
+    /* Dimensione uniforme per l'icona */
+    transition: transform 0.3s ease, color 0.3s ease;
+    /* Transizione fluida per trasformazioni e colore */
+    color: white;
+}
+
+/* Effetto hover per l'icona del chatbot */
+.icon-chatbot-container i.fa-clipboard-question:hover {
+    transform: scale(1.2);
+    /* Ingrandisce leggermente l'icona */
+    color: blue;
+    /* Cambia il colore al passaggio del mouse */
+}
+
+/* Stile personalizzato per il chatbot */
 .custom-heart {
     color: white;
     transition: color 0.3s ease;

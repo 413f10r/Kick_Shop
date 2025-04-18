@@ -21,7 +21,7 @@ async function chatbot(req, res) {
         }
 
         // Limita i dati per evitare problemi di dimensione del prompt
-        const limitedProducts = products.slice(0, 10).map(({ slug, name, price, description, availability, brand }) => ({
+        const limitedProducts = products.slice(0, 50).map(({ slug, name, price, description, availability, brand }) => ({
             slug,
             name,
             price,

@@ -18,7 +18,7 @@ connection.connect((err) => {
 // Funzione per recuperare i prodotti dal database
 export const getProducts = () => {
     return new Promise((resolve, reject) => {
-        const query = "SELECT * FROM products"; // Modifica la query in base alla tua struttura del database
+        const query = "SELECT * FROM products";
         connection.query(query, (err, results) => {
             if (err) return reject(err);
             resolve(results);

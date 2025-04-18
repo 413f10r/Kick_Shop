@@ -14,7 +14,14 @@ const port = process.env.SERVER_PORT || 3000;
 
 // Configurazione di CORS per consentire richieste dal frontend
 app.use(cors({
-    origin: process.env.FRONTEND_APP
+    origin: (origin, callback) => {
+        console.log("Richiesta da origine:", origin);
+        if (!origin || origin === process.env.FRONTEND_APP) {
+            callback(null, true);
+        } else {
+            callback(new Error("Non consentito da CORS"));
+        }
+    }
 }));
 
 // Middleware
