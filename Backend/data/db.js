@@ -15,5 +15,16 @@ connection.connect((err) => {
     console.log('Connesso al database');
 });
 
+// Funzione per recuperare i prodotti dal database
+export const getProducts = () => {
+    return new Promise((resolve, reject) => {
+        const query = "SELECT * FROM products"; // Modifica la query in base alla tua struttura del database
+        connection.query(query, (err, results) => {
+            if (err) return reject(err);
+            resolve(results);
+        });
+    });
+};
+
 // Esportazione della connessione per essere utilizzata in altri file
 export default connection;
