@@ -5,6 +5,8 @@ import productRouter from './routers/productRouter.js';
 import searchRouter from './routers/searchRouter.js'
 import orderRouter from './routers/checkoutRouter.js';
 import imagePathMiddleware from './middlewares/imagePath.js';
+import chatbotRouter from './routers/chatbotRouter.js';
+
 
 // Creazione dell'istanza di Express e definizione della porta del server
 const app = express();
@@ -26,6 +28,8 @@ app.use('/products', productRouter); // Rotta per la gestione dei prodotti
 app.use('/checkout', orderRouter); // Rotta per la gestione degli ordini
 
 app.use('/search', searchRouter); //
+
+app.use('/chatbot', chatbotRouter);
 
 // Avvio del server
 app.listen(port, () => {
