@@ -35,7 +35,7 @@ export default function Header() {
                     </NavLink>
 
                     {/* Navbar toggler */}
-                    <i 
+                    <i
                         className="fa-solid fa-bars icon_bars navbar-toggler"
                         data-bs-toggle="collapse"
                         data-bs-target="#navbarSupportedContent"
@@ -43,9 +43,9 @@ export default function Header() {
                         aria-expanded="false"
                         aria-label="Toggle navigation"
                     >
-                        
+
                     </i>
-                    
+
 
                     {/* Navbar links */}
                     <div className="collapse navbar-collapse" id="navbarSupportedContent">
@@ -137,8 +137,25 @@ export default function Header() {
                             </li>
                         </ul>
 
-                        {/* Wishlist */}
-                        <div className="icon-wishlist-container" style={{ width: "40px", height: "40px" }}>
+                            {/* Chatbot */}
+                            <div className="icon-chatbot-container" style={{ width: "40px", height: "40px" }}>
+                                <NavLink
+                                    className="me-2 mb-3 mb-lg-0"
+                                    to={`/chatbot`}
+                                    onClick={() => {
+                                        window.scrollTo(0, 0);
+                                        closeNavbar(); // Chiudi la navbar
+                                    }}
+                                >
+                                    <i
+                                        className="fa-solid fa-clipboard-question custom-chatbot"
+                                        onMouseEnter={(e) => (e.target.style.color = "blue")}
+                                        onMouseLeave={(e) => (e.target.style.color = "")}
+                                    ></i>
+                                </NavLink>
+                            </div>
+                            {/* Wishlist */}
+                            <div className="icon-wishlist-container" style={{ width: "40px", height: "40px" }}>
                             <NavLink
                                 className="me-2 mb-3 mb-lg-0"
                                 to={`/wish`}
@@ -181,6 +198,9 @@ export default function Header() {
                                     <strong>{cart.length}</strong>
                                 </span>
                             )}
+
+                           
+                          
                         </div>
 
                         {/* Search */}

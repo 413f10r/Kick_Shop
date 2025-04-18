@@ -19,6 +19,8 @@ import ThankYou from "./pages/ThankYou";
 import WishListPage from "./pages/WishListPage";
 import BallonPage from "./pages/BallonPage";
 
+import ChatBot from "./pages/ChatBotPage";
+
 // components
 import CartSection from "./components/CartSection";
 import WishSection from "./components/WishSection";
@@ -42,6 +44,7 @@ function App() {
                         <Route path="/search" Component={SearchPage} />
                         <Route path="/ballon" Component={BallonPage} />
                         <Route path="/thankyou" Component={ThankYou} />
+                        <Route path="/chatbot" Component={ChatBot} />
 
                     </Route>
                     <Route path="*" Component={NotFound} />

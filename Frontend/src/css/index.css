@@ -106,6 +106,10 @@ header {
     transition: color 0.3s ease;
 }
 
+.custom-chatbot {
+    color: white;
+    transition: color 0.3s ease;
+}
 .navbar-brand {
     font-size: 1.5rem;
     font-weight: bold;
