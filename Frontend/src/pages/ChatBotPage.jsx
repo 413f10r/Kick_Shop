@@ -1,5 +1,5 @@
 import { Link } from "react-router-dom"
-import ChatBotSection from "../components/modal/ChatBotSection"
+import ChatBotSection from "../components/toggle/ChatBotSection"
 import "../css/ChatBot.css";
 export default function ChatBot() {
     return (

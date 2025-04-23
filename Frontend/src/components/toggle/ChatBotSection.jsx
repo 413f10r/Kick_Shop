@@ -30,6 +30,7 @@ export default function ChatBotSection() {
   return (
     <div className="chatbot-container">
       {/* Area messaggi */}
+      <h3>Il tuo assistente virtuale</h3>
       <div className="chatbot-messages">
         {messages.map((msg, index) => (
           <div
@@ -49,7 +50,7 @@ export default function ChatBotSection() {
           rows={1}
           value={input}
           onChange={(e) => setInput(e.target.value)}
-          placeholder="Scrivi un messaggio..."
+          placeholder="mi serve aiuto per..."
         />
         <Button variant="primary" onClick={sendMessage}>
           Invia

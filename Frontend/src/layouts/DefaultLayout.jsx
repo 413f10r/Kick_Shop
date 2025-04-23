@@ -2,6 +2,7 @@ import { Outlet, useLocation } from "react-router-dom";
 import Header from "../components/Header";
 import Footer from "../components/Footer";
 import FootballCollection from "../components/FootballCollection";
+import ChatbotToggle from "../components/toggle/ChatbotToggle"; // Importa il nuovo componente
 
 export default function DefaultLayout() {
   const location = useLocation();
@@ -14,10 +15,14 @@ export default function DefaultLayout() {
       <Header />
       <main className="flex-grow-1 bg-light">
         <Outlet />
-        
+
         {/* Render FootballCollection solo se non siamo nella pagina /checkout */}
         {!isCheckoutPage && !isBallonPage && <FootballCollection />}
       </main>
+
+      {/* Aggiungi il componente ChatbotToggle */}
+      <ChatbotToggle />
+
       <Footer
         className="footer"
         style={{
